@@ -75,7 +75,7 @@ public class CollegeDao {
 	}
 	
 	//how to paginate the record
-	//where offset is pagenumber and pagesize is number of data
+	//where offset is pagenumber which start from 0 and pagesize is number of data
 	public Page<College>  findCollegeWithPagination(int offset,int pageSize){
 		
 		Page<College> college=collegeRepository.findAll(PageRequest.of(offset,pageSize));
